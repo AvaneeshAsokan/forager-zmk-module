@@ -26,31 +26,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        sabk: shift_to_alt_backspace {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp LA(BSPC)>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        smart_shift: smart_shift {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&caps_word>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        sym_bspc: left_thumb_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <200>;
-            bindings = <&mo>, <&sabk>;
-        };
-
         lhm: left_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -91,9 +66,9 @@
         base {
             bindings = <
 &kp Q         &kp W            &kp F            &kp P          &kp B         &kp SEMICOLON  &kp J          &kp L                 &kp U                &kp Y
-&mt LSHIFT A  &kp R            &kp S            &kp T          &kp G         &kp M          &kp N          &kp E                 &kp I                &kp O
+&mt LSHIFT A  &kp R            &kp S            &kp T          &kp G         &kp M          &kp N          &kp E                 &kp I                &mt RSHIFT O
 &lhm LCTRL Z  &lhm LEFT_WIN X  &lhm LEFT_ALT C  &kp D          &kp V         &kp K          &kp H          &rhm RIGHT_ALT COMMA  &rhm RIGHT_META DOT  &rhm RCTRL SLASH
-                                                &sym_bspc 2 0  &smart_shift  &smart_shift   &lt NAV SPACE
+                                                &kp BSPC       &kp SPACE     &kp ENTER      &mo NAV
             >;
         };
 
@@ -102,7 +77,7 @@
 &trans  &trans     &trans    &trans    &trans     &kp PAGE_UP    &kp LC(PG_UP)  &kp UP    &kp LC(PG_DN)  &kp DELETE
 &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans     &kp PAGE_DOWN  &kp LEFT       &kp DOWN  &kp RIGHT      &kp BSLH
 &trans  &trans     &trans    &trans    &trans     &trans         &kp HOME       &kp END   &kp LC(SPACE)  &kp LC(SPACE)
-                             &mo SYM   &kp LSHFT  &trans         &trans
+                             &mo SYM   &trans     &trans         &trans
             >;
         };
 
@@ -111,7 +86,7 @@
 &as LS(N1) N1        &as LS(N2) N2  &as LS(N3) N3  &as LS(N4) N4  &as LS(N5) N5  &as LS(N6) N6      &as LS(N7) N7        &as LS(N8) N8        &as LS(N9) N9      &as LS(N0) N0
 &as LS(GRAVE) GRAVE  &sk LCTRL      &sk LALT       &sk LGUI       &sk LC(LALT)   &as LS(BSLH) BSLH  &as LS(MINUS) MINUS  &as LS(EQUAL) EQUAL  &as LS(LBKT) LBKT  &as LS(RBKT) RBKT
 &trans               &trans         &trans         &trans         &trans         &trans             &trans               &trans               &trans             &kp ENTER
-                                                   &trans         &trans         &kp LSHFT          &mo NAV
+                                                   &trans         &trans         &trans             &mo NAV
             >;
         };
 
