@@ -234,8 +234,8 @@
             display-name = "BASE";
             bindings = <
 &kp Q         &kp W         &kp F          &kp P          &kp B          &kp SEMI     &kp J          &kp L          &kp U         &kp Y
-&hml LSHFT A  &hml LALT R   &hml LCTRL S   &hml LGUI T    &kp G          &kp M        &hmr RGUI N    &hmr RCTRL E   &hmr RALT I   &hmr RSHFT O
-&kp Z         &kp X         &kp C          &kp D          &kp V          &kp K        &kp H          &comma_morph   &dot_morph    &kp FSLH
+&hml LSHFT A  &kp R         &kp S          &kp T          &kp G          &kp M        &kp N          &kp E          &kp I         &hmr RSHFT O
+&hml LCTRL Z  &hml LGUI X   &hml LALT C    &kp D          &kp V          &kp K        &kp H          &hmr RALT COMMA &hmr RGUI DOT &hmr RCTRL FSLH
                                            &mo NAV        &kp SPACE      &kp ENTER    &tog NUM
             >;
         };
