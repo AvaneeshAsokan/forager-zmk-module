@@ -254,10 +254,10 @@
         num_layer {
             display-name = "NUM";
             bindings = <
-&kp ESC    &kp LBKT  &kp UP           &kp RBKT       &kp FSLH   &as UNDER MINUS  &as AMPERSAND N7     &as ASTERISK N8       &as LEFT_PARENTHESIS N9  &kp BSLH
-&kp TAB    &kp LEFT  &kp DOWN         &kp RIGHT      &kp HOME   &as PLUS EQUAL   &as DOLLAR NUMBER_4  &as PERCENT N5        &as CARET NUMBER_6       &kp END
-&kp LCTRL  &kp LGUI  &hml LALT GRAVE  &kp COMMA      &kp DOT    &as RPAR N0      &as EXCL NUMBER_1    &as AT_SIGN NUMBER_2  &as HASH NUMBER_3        &to 2
-                                      &kp BACKSPACE  &kp SPACE  &kp RETURN       &to 0
+&kp ESC              &kp LBKT  &kp UP           &kp RBKT       &kp FSLH   &as UNDER MINUS  &as AMPERSAND N7     &as ASTERISK N8       &as LEFT_PARENTHESIS N9  &hmr DEL BSLH
+&hml LEFT_SHIFT TAB  &kp LEFT  &kp DOWN         &kp RIGHT      &kp HOME   &as PLUS EQUAL   &as DOLLAR NUMBER_4  &as PERCENT N5        &as CARET NUMBER_6       &kp END
+&kp LCTRL            &kp LGUI  &hml LALT GRAVE  &kp COMMA      &kp DOT    &as RPAR N0      &as EXCL NUMBER_1    &as AT_SIGN NUMBER_2  &as HASH NUMBER_3        &to 2
+                                                &kp BACKSPACE  &kp SPACE  &kp RETURN       &to 0
             >;
         };
 
